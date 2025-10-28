@@ -7,7 +7,7 @@ const connectDB = require("./config/database");
 connectDB();
 
 // Server configuration
-const PORT = process.env.PORT || 3001; // Use environment port or default to 3001
+const PORT = process.env.PORT || 3000; // Use environment port or default to 3001
 
 // Start the server and listen on specified port and all network interfaces
 app.listen(PORT, "0.0.0.0", () => {

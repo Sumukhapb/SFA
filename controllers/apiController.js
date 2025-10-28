@@ -74,7 +74,6 @@ exports.pestDetection = async (req, res) => {
   try {
     const formData = new FormData();
     formData.append("file", fs.createReadStream(req.file.path));
-    console.log("computer networks padh raha hu");
     const apiResponse = await axios.post(process.env.CNN_Model_API, formData, {
       headers: formData.getHeaders(),
     });

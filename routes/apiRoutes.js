@@ -19,10 +19,7 @@ const upload = require("../config/multer");
  * Middleware Functions
  * Debug middleware for testing purposes
  */
-function hello(req, res, next) {
-  console.log("hello");
-  next();
-}
+
 
 /**
  * Route Definitions
@@ -53,7 +50,6 @@ router.post(
 // Pest Detection Routes - Some routes public for API access
 router.post(
   "/upload-endpoint",
-  hello,
   upload.single("file"),
   apiController.pestDetection
 );
